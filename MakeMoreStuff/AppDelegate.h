@@ -12,4 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, retain) IBOutlet UITextField *username;
+@property (nonatomic, retain) IBOutlet UITextField *password;
+
+- (IBAction) insertUser:(id)sender;
+
 @end

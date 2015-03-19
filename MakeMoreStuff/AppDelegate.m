@@ -10,6 +10,11 @@
 
 @implementation AppDelegate
 
+@synthesize window = _window;
+@synthesize username;
+@synthesize password;
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -41,6 +46,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (IBAction)inserUser:(id)sender {
+    
+    NSString *strURL = [NSString stringWithFormat:@"http://localhost:2000/service.php?username=%@&password=%@", username.text, password.text];
+    
+    
 }
 
 @end
